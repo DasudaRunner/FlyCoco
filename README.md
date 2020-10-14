@@ -4,8 +4,11 @@ New flexible apis for coco2017 dataset
 ## Features
 
 -[x] Dataset class 
+
 -[ ] Dataloader class
+
 -[ ] support single gpu and multi-gpus
+
 
 ## Envs
 #### pycocotools
