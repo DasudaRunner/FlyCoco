@@ -1,0 +1,30 @@
+
+train_data:
+  data_root: '/Users/haibo/workspace/dataset/coco/coco2017/'
+  img_prefix: 'train2017'
+  ann_file: 'annotations/instances_train2017.json'
+
+val_data:
+  data_root: '/Users/haibo/workspace/dataset/coco/coco2017/'
+  img_prefix: 'val2017'
+  ann_file: 'annotations/instances_val2017.json'
+  pipline:
+    Resize:
+      img_scale:
+        - '768,512'
+        - '768,480'
+        - '768,448'
+        - '768,416'
+        - '768,384'
+        - '768,352'
+      keep_ratio: true
+    RandomFlip:
+      ratio: 0.5
+    Normalize:
+      to_rgb: true
+    Pad:
+      size_divisor: 32
+
+num_classes: 81
+
+
